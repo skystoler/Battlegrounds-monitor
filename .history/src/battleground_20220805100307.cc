@@ -16,23 +16,23 @@ void BattleGround::addMinion(bgm::Minion::ptr minion,size_t pos){
     }else{
         it+=pos;
         m_minion_list.insert(it,minion);
-        minion->SetPos(pos);
+        minion->SetPos(size);
 
         //list插入位置后面的所有随从依次后移，之前的判断已经保证随从不会溢出格子
         for(;it!=m_minion_list.end();++it){
-            it->getPos(it->getPos()+1);
+            it->SetPos(it->GetPos()+1);
         }
     }
 }
 
 void BattleGround::deleteMinion(bgm::Minion::ptr minion){
-    size_t pos=minion->getPos();
+    size_t pos=minion->GetPos();
     auto it=m_minion_list.begin();
     it+=pos;
     m_minion_list.earse(it);
     ++it;
     for(;it!=m_minion_list.end();++it){
-        it->setPos(it->getPos()-1);
+        it->SetPos(it->GetPos()-1);
     }
 }
 

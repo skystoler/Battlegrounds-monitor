@@ -19,29 +19,12 @@ public:
 class Minion{
 public:
     using ptr=std::unique_ptr<Minion>;
-    Minion(uint32_t attack,uint32_t health,MinionRace::Race race,bool shield=false,
-            bool windfury=false,bool poisonous=false,bool taunt=false);
+    Minion(uint32_t attack,uint32_t health,MinionRace::Race race);
     ~Minion();
 
     size_t getPos() const{return m_pos;}
 
     void setPos(size_t pos){m_pos=pos;}
-
-    bool getShield() const{return m_sheild;}
-
-    bool getWindfury() const{return m_windfury;}
-
-    bool getPoisonous() const{return m_poisonous;}
-
-    bool getTaunt() const{return m_taunt;}
-
-    bool setShield(bool shield){m_sheild=shield;}
-
-    bool setWindfury(bool windfury){m_windfury=windfury;}
-
-    bool setPoisonous(bool poisonous){m_poisonous=poisonous;}
-
-    bool setTaunt(bool taunt){m_taunt=taunt;}
 
     void fight(ptr minion);
 
@@ -56,6 +39,7 @@ private:
     bool m_windfury; 
     bool m_poisonous;
     bool m_taunt;
+
 };
 
 

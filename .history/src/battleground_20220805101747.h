@@ -1,9 +1,7 @@
 #ifndef __BATTLEGROUND_H__
 #define __BATTLEGROUND_H__
 
-#include <stddef.h>
-#include <list>
-
+#include <list5>
 namespace bgm{
 
 class BattleGround{

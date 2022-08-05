@@ -13,7 +13,6 @@ Minion::~Minion(){
 }
 
 void Minion::fight(ptr minion){
-    //双破盾
     if(m_sheild && minion->getShield()){
         m_sheild=false;
         ptr->setShield(false);

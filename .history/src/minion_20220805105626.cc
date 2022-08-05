@@ -5,7 +5,6 @@ Minion::Minion(uint32_t attack,uint32_t health,MinionRace::Race race,bool shield
         bool windfury=false,bool poisonous=false,bool taunt=false)
     :m_attack(attack),m_health(health),m_race(race),m_sheild(shield)
     ,m_windfury(windfury),m_poisonous(poisonous),m_taunt(taunt){
-
 }
 
 Minion::~Minion(){
@@ -13,11 +12,7 @@ Minion::~Minion(){
 }
 
 void Minion::fight(ptr minion){
-    //双破盾
-    if(m_sheild && minion->getShield()){
-        m_sheild=false;
-        ptr->setShield(false);
-    }
+    if()
 }
 
 }

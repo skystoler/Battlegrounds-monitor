@@ -16,7 +16,7 @@ void BattleGround::addMinion(bgm::Minion::ptr minion,size_t pos){
     }else{
         it+=pos;
         m_minion_list.insert(it,minion);
-        minion->SetPos(pos);
+        minion->SetPos(size);
 
         //list插入位置后面的所有随从依次后移，之前的判断已经保证随从不会溢出格子
         for(;it!=m_minion_list.end();++it){

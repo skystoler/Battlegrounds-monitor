@@ -15,18 +15,12 @@ int main(int argc,char** argv){
     std::cout<<"b2 minion number:"<<std::endl;
     std::cin>>b2_number;
 
-    //依次初始化随从
+    //依次初始化随从,
     for(size_t i=0;i<b1_number;++i){
         std::cout<<"初始化第"<<i+1<<"个随从：";
         bgm::Minion::ptr(new bgm::Minion(1,1,bgm::Race::dragon));
         //添加随从并set pos
         b1.addMinion(ptr,i);
-    }
-    for(size_t i=0;i<b2_number;++i){
-        std::cout<<"初始化第"<<i+1<<"个随从：";
-        bgm::Minion::ptr(new bgm::Minion(10,10,bgm::Race::dragon));
-        //添加随从并set pos
-        b2.addMinion(ptr,i);
     }
     //战斗阶段
 
@@ -34,7 +28,7 @@ int main(int argc,char** argv){
     std::random_device rd;  // 将用于为随机数引擎获得种子
     std::mt19937 gen(rd()); // 以播种标准 mersenne_twister_engine
 
-    //确定先后手
+    //先后手
     std::uniform_int_distribution<> fight_order(1,2);
     if(fight_order(gen)==1){
 
@@ -42,8 +36,8 @@ int main(int argc,char** argv){
         
     }
 
-    //确定攻击目标
-    std::uniform_int_distribution<> fight_target(1, b1.getMinionNumber()); 
-    std::uniform_int_distribution<> fight_target(1, b2.getMinionNumber()); 
+    //攻击目标
+    std::uniform_int_distribution<> fight_target(1, bgm::BattleGround::getMinionNumber()); 
+
     return 0;
 }

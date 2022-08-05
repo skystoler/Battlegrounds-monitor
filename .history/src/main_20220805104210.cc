@@ -44,6 +44,6 @@ int main(int argc,char** argv){
 
     //确定攻击目标
     std::uniform_int_distribution<> fight_target(1, b1.getMinionNumber()); 
-    std::uniform_int_distribution<> fight_target(1, b2.getMinionNumber()); 
+
     return 0;
 }

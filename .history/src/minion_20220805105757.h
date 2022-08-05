@@ -31,17 +31,9 @@ public:
 
     bool getWindfury() const{return m_windfury;}
 
-    bool getPoisonous() const{return m_poisonous;}
+    bool getShield() const{return m_sheild;}
 
-    bool getTaunt() const{return m_taunt;}
-
-    bool setShield(bool shield){m_sheild=shield;}
-
-    bool setWindfury(bool windfury){m_windfury=windfury;}
-
-    bool setPoisonous(bool poisonous){m_poisonous=poisonous;}
-
-    bool setTaunt(bool taunt){m_taunt=taunt;}
+    bool getShield() const{return m_sheild;}
 
     void fight(ptr minion);
 

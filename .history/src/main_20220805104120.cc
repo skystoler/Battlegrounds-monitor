@@ -26,7 +26,7 @@ int main(int argc,char** argv){
         std::cout<<"初始化第"<<i+1<<"个随从：";
         bgm::Minion::ptr(new bgm::Minion(10,10,bgm::Race::dragon));
         //添加随从并set pos
-        b2.addMinion(ptr,i);
+        b1.addMinion(ptr,i);
     }
     //战斗阶段
 
@@ -43,7 +43,7 @@ int main(int argc,char** argv){
     }
 
     //确定攻击目标
-    std::uniform_int_distribution<> fight_target(1, b1.getMinionNumber()); 
-    std::uniform_int_distribution<> fight_target(1, b2.getMinionNumber()); 
+    std::uniform_int_distribution<> fight_target(1, bgm::BattleGround::getMinionNumber()); 
+
     return 0;
 }

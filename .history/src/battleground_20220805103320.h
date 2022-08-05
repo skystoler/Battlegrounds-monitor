@@ -1,7 +1,7 @@
 #ifndef __BATTLEGROUND_H__
 #define __BATTLEGROUND_H__
 
-#include <stddef.h>
+#include<stddef.h>
 #include <list>
 
 namespace bgm{
